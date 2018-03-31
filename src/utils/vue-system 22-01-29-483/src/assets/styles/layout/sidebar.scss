@@ -1,0 +1,18 @@
+.sidebar-wrap{
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 180px;
+  background-color: rgb(104, 173, 198);
+  height: 100%;
+  transition: width .28s;
+  &.active{
+    width: 64px !important;
+  }
+  .el-submenu .el-menu-item{
+    min-width: 180px;
+  }
+  .el-menu--collapse{
+    transition: width .28s;
+  }
+}
