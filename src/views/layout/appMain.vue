@@ -2,13 +2,15 @@
   <div class="app-main" :class="{hideSidebar: isCollapse}">
     <header-on></header-on>
     <tag-view></tag-view>
-    <router-view :key="key"/>
+    <div class="components-wrap">
+      <router-view :key="key"/>
+    </div>
   </div>
 </template>
 
 <script>
-import HeaderOn from '@/views/layout/header'
-import TagView from '@/views/layout/tag'
+import HeaderOn from '@/views/layout/Header'
+import TagView from '@/views/layout/TagView'
 export default {
   components: {
     HeaderOn,
