@@ -6,6 +6,7 @@ import routes from './baseConfig'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import store from '@/store'
+import errPage from '@/utils/404'
 Vue.use(Router)
 export const router = new Router({
   // mode: 'history',
@@ -40,12 +41,13 @@ router.beforeEach((to, from, next) => {
         store.dispatch('permiss/setFilterRoutes', role.data.data.role[0]).then((res) => { // 根据role过滤路由
           store.dispatch('permiss/setRoutes', res) // vuex管理路由
           router.addRoutes(res) // 动态的添加路由
+          router.addRoutes(errPage) // for 404
           next({
             name: 'dashboard_index'
           })
         })
       })
-      /** 正式用注释这段就够了，因为后天回返给不同的角色End*********/
+      /** 正式用注释这段就够了，因为后台回返给不同的角色End*********/
     } else {
       next() // 否则全部重定向到登录页
       NProgress.done()
