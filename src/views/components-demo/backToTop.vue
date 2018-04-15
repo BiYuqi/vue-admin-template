@@ -18,6 +18,6 @@ export default {
 
 <style lang="scss">
 .back-top{
-  height: 1024px;
+  height: 1824px;
 }
 </style>

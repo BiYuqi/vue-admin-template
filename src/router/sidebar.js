@@ -18,20 +18,19 @@ export const baseRoute = [
     ]
   },
   {
-    path: '/setting',
-    title: '配置',
-    name: 'set',
-    icon: 'qq',
+    path: '/icon',
+    title: '图标',
+    name: 'icon',
+    icon: 'icon',
     component: Main,
     children: [
       {
-        path: 'setting',
-        name: 'setting_index',
+        path: 'icon',
+        name: 'icon_index',
         meta: {
-          title: '配置',
-          access: ['admin']
+          title: '图标'
         },
-        component: () => import('@/views/components-demo/setting.vue')
+        component: () => import('@/views/icon-page/index.vue')
       }
     ]
   },
@@ -68,6 +67,24 @@ export const baseRoute = [
           access: ['admin']
         },
         component: () => import('@/views/components-demo/backToTop.vue')
+      }
+    ]
+  },
+  {
+    path: '/setting',
+    title: '配置',
+    name: 'set',
+    icon: 'qq',
+    component: Main,
+    children: [
+      {
+        path: 'setting',
+        name: 'setting_index',
+        meta: {
+          title: '配置',
+          access: ['admin']
+        },
+        component: () => import('@/views/components-demo/setting.vue')
       }
     ]
   }
