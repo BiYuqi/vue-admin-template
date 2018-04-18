@@ -1,4 +1,18 @@
-# vue-system
+<p align="center">
+  Vue-admin-template
+</p>
+
+<p align="center">
+	<a href="https://github.com/vuejs/vue">
+		<img src="https://img.shields.io/badge/vue-2.5.2-blue.svg" alt="vue">
+	</a>
+	<a href="https://github.com/ElemeFE/element">
+		<img src="https://img.shields.io/badge/element----ui-2.3.2-blue.svg" alt="element-ui">
+	</a>
+	<a href="https://github.com/PanJiaChen/vue-element-admin/blob/master/LICENSE">
+		<img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
+	</a>
+</p>
 
 > 基于vue2.x element-ui 的后台开发模板 包含侧边栏权限过滤基础模板
 
