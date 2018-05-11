@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import HeaderOn from '@/views/layout/Header'
-import TagView from '@/views/layout/TagView'
+import HeaderOn from '@/views/layout/Header/Header'
+import TagView from '@/views/layout/TagViews/TagView'
 export default {
   components: {
     HeaderOn,
@@ -28,5 +28,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../styles/layout/appmain.scss';
+@import './appmain.scss';
 </style>

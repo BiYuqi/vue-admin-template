@@ -11,6 +11,7 @@
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
+        <el-dropdown-item command="github">项目地址</el-dropdown-item>
         <el-dropdown-item command="loginout">退出登录</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
@@ -39,6 +40,9 @@ export default {
             location.reload()
           }, 0)
           break
+        case 'github':
+          window.open('https://github.com/BiYuqi/vue-element-admin')
+          break
         default:
       }
     }
@@ -52,5 +56,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../styles/layout/header.scss';
+@import './header.scss';
 </style>
