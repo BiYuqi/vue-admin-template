@@ -1,13 +1,16 @@
 export const state = {
   pageOpenedList: [
     {
-      meta: {title: '首页'},
+      path: '/dashboard',
       name: 'dashboard_index',
-      path: '/dashboard/dashboard',
+      meta: {
+        title: '首页'
+      },
       arg: {},
       query: {}
     }
   ],
   sidebarStatus: 0, // 展开
-  headVisetedShow: true // 顶部访问历史tab 是否显示
+  headVisetedShow: true, // 顶部访问历史tab 是否显示
+  currentPageName: '' // 当前路由name
 }

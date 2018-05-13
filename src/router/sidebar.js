@@ -2,10 +2,11 @@ import Main from '@/views/Main'
 // 侧边栏路由一般都放在这里 需要权限校验
 export const baseRoute = [
   {
-    path: '/dashboard',
+    path: '',
     component: Main,
     title: '首页',
     icon: 'dashboard',
+    redirect: '/dashboard',
     children: [
       {
         path: 'dashboard',

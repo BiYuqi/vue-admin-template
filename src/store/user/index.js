@@ -1,9 +1,9 @@
-import * as types from './types'
+import * as types from './types.js'
+import {fetchUserInfo, fetchArrowSelect} from '@/api/userInfo'
 
 const state = {
-  role: []
+  role: []// 存储角色信息
 }
-
 const mutations = {
   [types.USER_INFO] (state, res) {
     state.role = res.data.data.role
@@ -12,20 +12,26 @@ const mutations = {
     state.role.length = 0
   }
 }
-
 const actions = {
-  getUserInfoAction ({state, commit, dispatch, getters, rootGetters}, data) {
-    const payload = rootGetters['api/payload']
-    payload.param = data
+  GetUserInfoAction ({state}, data) {
     return new Promise((resolve, reject) => {
-      payload.callback = res => {
+      fetchUserInfo(data).then(res => {
         resolve(res)
-      }
-      dispatch('api/getUserInfo', payload, {root: true})
+      }).catch(err => {
+        reject(err)
+      })
+    })
+  },
+  GetArrowSelect ({state}, data) { // 暂未用到
+    return new Promise((resolve, reject) => {
+      fetchArrowSelect(data).then(res => {
+        resolve(res)
+      }).catch(err => {
+        reject(err)
+      })
     })
   }
 }
-
 const getters = {
   role: state => {
     return state.role

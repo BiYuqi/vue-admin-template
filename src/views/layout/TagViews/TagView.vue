@@ -16,7 +16,7 @@
 
 <script>
 import { baseRoute } from '@/router/sidebar'
-import filterName from '@/utils/includes'
+import { filterName } from '@/utils/tools'
 import EventBus from '@/utils/eventBus'
 export default {
   data () {

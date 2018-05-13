@@ -18,13 +18,18 @@ export default {
     SideBar
   },
   mounted () {
-    console.log(this.$router)
+    // console.log(this.$router)
   },
   created () {
     this.$store.commit('setOpenedList')
+    // this.$router.push({
+    //   name: localStorage.currentPageName
+    // })
   },
   watch: {
-    '$route' (to, from) {}
+    '$route' (to, from) {
+      this.$store.commit('setCurrentPageName', to.name)
+    }
   }
 }
 </script>
