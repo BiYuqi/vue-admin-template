@@ -35,9 +35,8 @@ npm run build
 ```
 
 ### 本地起服务
-由于easy-moc服务非常不稳定，所以本地新增node模拟接口
-
-** server文件夹 **
+由于easy-mock服务非常不稳定，所以本地新增node模拟接口
+server文件夹
 * 为本地node服务，本地npm run dev后，需要在server目录 node app 来启动本地服务，以便登录正常进行
 * 以下为utils/request.js文件配置
 ```js
