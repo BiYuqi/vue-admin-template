@@ -16,12 +16,8 @@
 
 > 基于vue2.x element-ui 的后台开发模板 包含侧边栏权限过滤基础模板
 
-## DEMO
-![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-template.png)
-![](http://oq4hkch8e.bkt.clouddn.com/admin.gif)
 
-
-## Build Setup
+### 本地跑项目
 
 ``` bash
 #  download
@@ -36,18 +32,29 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
+
+### 本地起服务
+由于easy-moc服务非常不稳定，所以本地新增node模拟接口
+
+** server文件夹 **
+* 为本地node服务，本地npm run dev后，需要在server目录 node app 来启动本地服务，以便登录正常进行
+* 以下为utils/request.js文件配置
+```js
+// base setting
+const BASE_URL = process.env.NODE_ENV === 'production'
+  ? 'https://easy-mock.com/mock/5aa881eb99ed355f274d0e93'
+  : 'http://localhost:7085'
+const service = axios.create({
+  baseURL: BASE_URL,
+  timeout: 10000
+})
+```
+
+## DEMO
+![](http://oq4hkch8e.bkt.clouddn.com/vue-admin-template.png)
+![](http://oq4hkch8e.bkt.clouddn.com/admin.gif)
+
+
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
