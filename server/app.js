@@ -29,6 +29,6 @@ app.get('/system/userInfo', (req, res) => {
   }
 })
 
-app.listen(process.env.PORT || 7085, () => {
-  console.log('HTTP Server is running in http://localhost:7085')
+app.listen(process.env.PORT || 6890, () => {
+  console.log('HTTP Server is running in http://localhost:6890')
 })

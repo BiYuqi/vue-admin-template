@@ -43,7 +43,7 @@ server文件夹
 // base setting
 const BASE_URL = process.env.NODE_ENV === 'production'
   ? 'https://easy-mock.com/mock/5aa881eb99ed355f274d0e93'
-  : 'http://localhost:7085'
+  : 'http://localhost:6890'
 const service = axios.create({
   baseURL: BASE_URL,
   timeout: 10000
