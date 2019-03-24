@@ -27,6 +27,10 @@ cd vue-admin-template
 # install dependencies
 npm install
 
+# start local server
+
+npm run server
+
 # serve with hot reload at localhost:8080
 npm run dev
 
