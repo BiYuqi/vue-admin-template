@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {state} from './state'
-import {mutations} from './mutations'
+import { state } from './state'
+import { mutations } from './mutations'
 import user from './user'
 import permiss from './permiss'
 Vue.use(Vuex)

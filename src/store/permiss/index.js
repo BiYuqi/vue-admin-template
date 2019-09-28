@@ -22,14 +22,14 @@ const getters = {
 }
 
 const actions = {
-  setFilterRoutes ({state, commit, dispatch, getters, rootGetters}, data) {
+  setFilterRoutes ({ state, commit, dispatch, getters, rootGetters }, data) {
     return new Promise((resolve, reject) => {
       const role = data
       const result = filterRoutesByRole(baseRoute, role)
       resolve(result)
     })
   },
-  setRoutes ({commit}, res) {
+  setRoutes ({ commit }, res) {
     commit(types.SET_ROUTES, res)
   }
 }

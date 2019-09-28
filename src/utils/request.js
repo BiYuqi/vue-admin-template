@@ -3,11 +3,11 @@ import { Message } from 'element-ui'
 
 // base setting
 const BASE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://easy-mock.com/mock/5aa881eb99ed355f274d0e93'
-  : 'http://localhost:6890'
+  ? 'production api'
+  : 'development api'
 const service = axios.create({
   baseURL: BASE_URL,
-  timeout: 5000
+  timeout: 10000
 })
 
 service.interceptors.request.use(config => {
